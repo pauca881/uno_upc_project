@@ -52,6 +52,37 @@ Puedes ver todas las ramas con:
 
 Ahora podrás hacer push sin miedo, ya que tus modificaciones se harán en la rama `feature/nombre_del_feature`
 
+# # primera modificación en mi branch de feature
+
+Sigue las instrucciones que aparecen arriba y crea una rama feature/ con el nombre que quieras.
+
+Asegurate que estas dentro de la rama con `git branch`.
+
+Ves al archivo README.md y agrega: 
+
+-> # # Developes 
+-> nombre: NickName_Github.
+
+por ejemplo:
+`# # Developes`
+`Hector: Ktexaswalker`
+
+comprueba el estado de tu rama feature/ con `git status`.
+
+agrega los cambios con:
+
+`git add .`
+
+añade un commit acorde al trabajo realizado: 
+
+`git commit -m "first commit Ktexaswalker"`
+
+sube el repositorio local al remoto:
+
+`git push origin nombre_rama`
+
+por ejemplo: git push origin feature/GitHelp
+
 # # Para fusionar ramas
 
 Ir a la rama principal main
