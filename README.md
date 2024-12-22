@@ -20,3 +20,6 @@ The website is aimed at a broad audience, especially fans of casual, easy-to-lea
 
 [TO DO]
 
+# # Developes
+
+Hector: Ktexaswalker
