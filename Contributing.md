@@ -14,9 +14,7 @@
 
 - Busca la pestaña Terminal y abre una nueva terminal clicando en New Terminal.
 
-- clona el repositorio remoto de tu perfil para tenerlo en local. Escribe
-
-`git clone`, haz clic derecho del mouse y pulsa Enter.
+- clona el repositorio remoto de tu perfil para tenerlo en local. Escribe `git clone`, haz clic derecho del mouse y pulsa Enter.
 
 Una vez descargado el repositorio, asegurate que estas dentro del repositorio local, 
 
@@ -82,6 +80,28 @@ sube el repositorio local al remoto:
 `git push origin nombre_rama`
 
 por ejemplo: git push origin feature/GitHelp
+
+Ves a tu Github y comprueba que estas en la rama feature/.
+
+
+
+y busca el boton 'Contribute', deberia aparecer un boton verde 'Open pull request'. Al hacer clic en este boton, estarás enviando la aportación al codigo original, en este caso (pauca881/uno_upc_project).
+
+Se desplegará un formulario donde podrás explicar todos los cambios que has realizado.
+
+Finalmente haz clic en 'Create pull request'
+
+
+# # Administrar las pull request
+
+En el proyecto, aparece la pestaña 'Pull requests' y el numero de aportaciones.
+
+Haz clic en la pestaña y aparece una lista con los commits enviados por los colaboradores.
+
+En la pestaña 'Files changed', puedes inspeccionar los cambios realizados.
+
+En caso de que todo esté correcto, haz clic en Merge pull request para importar las contribuciones al repositorio principal.
+
 
 # # Para fusionar ramas
 
