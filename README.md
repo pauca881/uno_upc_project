@@ -1,3 +1,5 @@
+APP_KEY=base64:2Iw1RxDoQMSAOpTfTc+k0nVnfMSsipz272dZ/br7gOI=
+
 # uno_upc_project
 
 ## Download Repository on your pc ##
