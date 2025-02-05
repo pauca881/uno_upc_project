@@ -1,5 +1,11 @@
 # uno_upc_project
 
+## Download Repository on your pc ##
+
+Enter Windows + R, cmd, put in Desktop and type
+
+git clone https://github.com/pauca881/uno_upc_project.git
+
 # # Project Overview
 
 This project is focused on creating a promotional website for the popular Uno card game. The website will serve as an online platform to introduce the game, provide information about its features, and encourage players to try it. The site will be developed by us, some students from DAW in collaboration with students from UPC, who are responsible for the game's development.
