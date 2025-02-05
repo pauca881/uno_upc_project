@@ -8,8 +8,19 @@
 </head>
 <body>
 
-    {{-- Aquí es ficarà navbar --}}
+    <nav>
+        
 
+        <img src="ruta-a-tu-imagen.jpg" alt="Foto Principal" width="100" height="100">
+
+
+        <ul>
+            <li><a href="{{ route('login') }}">Login</a></li>
+            <li><a href="#registro">Registro</a></li>
+            <li><a href="#joc">Joc</a></li>
+        </ul>
+    </nav>
+    
     @yield('content')
     
 </body>
