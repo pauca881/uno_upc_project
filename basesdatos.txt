@@ -1,0 +1,37 @@
+php artisan migrate
+
+php artisan make:model tplayer -m
+php artisan make:model ttorneo -m
+php artisan make:model tpartida -m
+php artisan migrate
+
+
+
+
+- Jugadores (última tabla que se crea)
+Id ( PK )
+Nombre
+apellido
+username ( UNIQUE )
+FK(id_partidas)
+
+C - Registro
+R - Login / Leer Jugadores
+U - Actualizar perfil
+D - Borrar perfil
+
+
+- Torneos
+ID ( PK )
+Nombre
+Descripción
+
+C - Crear Torneo
+R - Leer Torneo
+U - Actualizar Torneo
+D - Borrar Torneo
+
+
+- Partidas
+ID ( PK )
+Puntuación total
