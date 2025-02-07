@@ -1,0 +1,32 @@
+- Jugadores (última tabla que se crea)
+Id ( PK )
+Nombre
+apellido
+username ( UNIQUE )
+FK(id_partidas)
+
+C - Registro
+R - Login / Leer Jugadores
+U - Actualizar perfil
+D - Borrar perfil
+
+
+- Torneos
+ID ( PK )
+Nombre
+Descripción
+
+XAVI
+SEEDERS TORNEO 
+C - Crear Torneo
+R - Leer Torneo
+U - Actualizar Torneo
+D - Borrar Torneo
+
+HECTOR
+- Partidas
+ID ( PK )
+Puntuación total
+
+
+
