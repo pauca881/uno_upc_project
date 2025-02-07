@@ -1,11 +1,23 @@
 php artisan migrate
 
-php artisan make:model tplayer -m
+php artisan make:model tplayer -md
 php artisan make:model ttorneo -m
 php artisan make:model tpartida -m
 php artisan migrate
 
+php artisan make:migration create_player_torneo_table 
 
+Editem taules
+
+php artisan migrate:refresh
+
+php artisan make:controller playercontroller
+php artisan make:controller torneocontroller
+php artisan make:controller relacionnmcontroller
+php artisan make:controller partidacontroller
+
+Seeders para cada objeto
+Factory para cada objeto
 
 
 - Jugadores (última tabla que se crea)
