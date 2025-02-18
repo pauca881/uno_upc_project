@@ -1,0 +1,25 @@
+DESPLEGAR APLICACIÓ EN APACHE: Angular (front-end) + Laravel (api)
+
+1.- heu d'activar el mòdul rewrite d'Apache
+2.- desplegueu Laravel (en mode API)
+3.- a la carpeta public de laravel, poseu els fitxers d'angular (el que us genera a dist). Sense esborrar els de laravel!
+4.- cal crear un fitxer .htaccess (barreja del que diu angular i el que té el laravel):
+
+RewriteEngine On
+
+# Handle Authorization Header (laravel)
+RewriteCond %{HTTP:Authorization} .
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+# If an existing asset or directory is requested go to it as it is
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+RewriteRule ^ - [L]
+
+# routes starting per api are redirected to index.php (for laravel)
+RewriteRule ^(api/.*) /index.php [NC,L]
+
+# If the requested resource doesn't exist, use index.html (angular)
+RewriteRule ^ /index.html
+
+(ACLARACIÓ del que diu aquest arxiu .htaccess: afegeix la capçalera autorització, serveix carpeta o fitxer si existeix, si la ruta comença per api serveix index.php de laravel, per la resta de rutes serveix index.html de angular)
