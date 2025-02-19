@@ -1,0 +1,105 @@
+php artisan make:model Product -m
+Afegeixo camps a la migracio database/migrations
+
+php artisan make:factory ProductFactory --model=Product
+Afegeixo camps al factory
+
+php artisan make:seeder ProductSeeder
+// Crear 50 productos de ejemplo
+Product::factory(50)->create();
+
+
+Errors que he hagut d'editar:
+Editar .env
+
+# SESSION_DRIVER=database
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=examenuf3
+DB_USERNAME=root
+DB_PASSWORD=
+
+# SESSION_DRIVER=database
+SESSION_DRIVER=cookie
+
+Problemes connexió amb mysql:
+editar config/database.php:
+    'default' => env('DB_CONNECTION', 'mysql'),
+
+
+----------------------------------------
+
+Relació 1:N:
+
+Un user pot tindre varis posts
+
+class User extends Model
+{
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+}
+
+------
+
+class Post extends Model
+{
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+}
+
+
+Migració user:
+
+ $table->id();
+    $table->string('name');
+    $table->timestamps();
+
+Migració Posts:
+
+    $table->id();
+    $table->string('title');
+    $table->text('content');
+    $table->foreignId('user_id')->constrained()->onDelete('cascade');
+    $table->timestamps();
+
+    //Controladors
+    $user = User::find(1);
+    $posts = $user->posts;
+
+Relació N:M:
+
+class User extends Model
+{
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class);
+    }
+}
+
+class Role extends Model
+{
+    public function users()
+    {
+        return $this->belongsToMany(User::class);
+    }
+}
+
+Migracio taula intermitja:
+
+Schema::create('role_user', function (Blueprint $table) {
+    $table->id();
+    $table->foreignId('user_id')->constrained()->onDelete('cascade');
+    $table->foreignId('role_id')->constrained()->onDelete('cascade');
+    $table->timestamps();
+});
+
+
+$user = User::find(1); // Encuentra al usuario con id 1
+$roles = $user->roles; // Obtiene todos los roles asignados al usuario
+
+$role = Role::find(1); // Encuentra el rol con id 1
+$users = $role->users; // Obtiene todos los usuarios asignados a ese rol
